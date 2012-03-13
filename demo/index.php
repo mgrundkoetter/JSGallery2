@@ -106,7 +106,7 @@
 
 		<div style="clear: both; height: 50px;"></div>
 
-		<p>You need a particular HTML structure to get this to work (or <a href="flickr.php">flickr</a> or <a href="simpleviewer.php">xml</a>). First, you need a container where your pages are located in. You can then put thumbnail images into this
+		<p>You need a particular HTML structure to get this to work (or <a href="flickr.php">flickr</a>). First, you need a container where your pages are located in. You can then put thumbnail images into this
 		page, each surrounded by a div. This additional container will later contain the dynamic border. If you like to have more pages, just create more page containers and so on.<br/>
 		The most important thing, is the relation to the big image. So make sure, that each thumbnail is linked to somewhere and this link has a rel attribute. You just have to
 		put the big image url in there.</p>
@@ -131,7 +131,6 @@
 				<li>several methods to be used with your own controls (prevImage/nextImage, prevPage/nextPage, gotoPage, selectByIndex)</li>
 				<li>dynamic adding of new images to the gallery (with JSGallery2_dynamic)</li>
 				<li>shows flickr images (with <a href="flickr.php">JSGallery2_flickr</a>)</li>
-				<li>shows simple viewer xml galleries (with <a href="simpleviewer.php">JSGallery2_simpleviewer</a>)</li>
 			</ul>
 		</p>
 
@@ -176,9 +175,7 @@ maxOpacity: 		0.8	//maximum opacity before cursor reaches prev/next control,
 
 <pre>myGallery.addImage('images/thumb_17.jpg', 'images/big_17.jpg', '?image=images/big_17.jpg');</pre>
 
-<p>If you like to create a JSGallery2 from flickr images, check out my <a href="flickr.php">JSGallery2_flickr</a> extension for JSGallery2 and if you
-like to have an easy-to-use <a href="http://www.airtightinteractive.com/simpleviewer/">SimpleViewer</a> fallback, check out my
-<a href="simpleviewer.php">JSGallery2_simpleviewer</a> extension which parses the same xml file!</p>
+<p>If you like to create a JSGallery2 from flickr images, check out my <a href="flickr.php">JSGallery2_flickr</a> extension for JSGallery2.</p>
 
 	<p><a href="https://github.com/aplusmedia/JSGallery2">Download on github</a></p>
 
