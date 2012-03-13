@@ -6,6 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
 	<title>JSGallery2 demopage</title>
+
 	<script type="text/javascript" src="../lib/mootools-core.js"></script>
 	<script type="text/javascript" src="../lib/mootools-more.js"></script>
 	<script type="text/javascript" src="../src/JSGallery2.js"></script>
@@ -18,119 +19,21 @@
 			myGallery.addImage('images/thumb_17.jpg', 'images/big_17.jpg', '?image=images/big_17.jpg');
 		});
 	</script>
-	<style type="text/css" media="screen">
-		body {
-			background-color: #000;
-			color: #fff;
-			font-family: Helvetica;
-			font-size: 12px;
-			line-height: 1.2em;
-		}
-		
-		body a {
-			color: #fff;
-		}
-		
-		#container {
-			width: 850px;
-			margin: 100px auto;
-		}
-		
-		#thumbs {
-			overflow: hidden;
-			position: relative;
-		}
-		
-		#pageContainer {
-			width: 3900px;
-		}
-		
-		#pagerContainer {
-			float: left;
-			width: 250px;
-			margin-right: 50px;
-			height: 280px;
-		}
-		
-		.page {
-			float: left;
-			width: 300px;
-			margin-bottom: 10px;
-		}
-		
-		.thumbnail {
-			float: left;
-			margin: 0 15px 17px 0;
-			width: 65px;
-			height: 65px;
-		}
-		
-		pre {
-			border: 1px solid #fff;
-			background-color: #333;
-			padding: 5px;
-		}
-		
-		/* this is for the loading.gif */
-		.thumbnail div img {
-			margin: 22px;
-		}
-		
-		.thumbnail a img {
-			width: 65px;
-			height: 65px;
-		}
-		
-		#bigimageContainer {
-			float: left;
-			position: relative;
-		}
-		
-		#bigImage {
-			border: 3px solid #fff;
-		}
-		
-		#prev {
-			float: left;
-			outline: none;
-		}
-		
-		#next {
-			float: right;
-			outline: none;
-		}
-		
-		a img {
-			border: 2px solid #fff;
-		}
-	</style>
+
+	<link href="styles.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
 	<div id="container">
-	
-		<div style="width: 120px; float: left; margin-right: 10px;">
-			<script type="text/javascript"><!--
-			google_ad_client = "pub-5874325925181571";
-			/* 120x600, Gallery-Example */
-			google_ad_slot = "4388093750";
-			google_ad_width = 120;
-			google_ad_height = 600;
-			//-->
-			</script>
-			<script type="text/javascript"
-			src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-			</script>
-		</div>
-	
+
 		<h1>JSGallery2 example page</h1>
-		
+
 		<p>This an example for the JSGallery2 script. It evolved from the <a href="http://blog.aplusmedia.de/moo-gallery">old version</a> (for MooTools 1.11), which is still available.
-		As this new version is fully compatible with the old one, consider to switch to MooTools 1.2 and use this version! 
+		As this new version is fully compatible with the old one, consider to switch to MooTools 1.2 and use this version!
 		It uses the <a href="http://mootools.net">mootools framework (version 1.2!)</a> and is totally free to use. Nevertheless, a backlink to my blog (or a <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=mg%40aplusmedia%2ede&item_name=A%2bmedia&no_shipping=1&return=http%3a%2f%2fblog%2eaplusmedia%2ede&cn=Betreff&tax=0&currency_code=EUR&lc=DE&bn=PP%2dDonationsBF&charset=UTF%2d8">donation</a> maybe?) would be very nice :-)<br/>
-		This script was made by <a href="http://www.aplusmedia.de">A+media</a> and can be <a href="http://www.esteak.net/basket/addplugin/JSGallery2">downloaded on eSteak.net</a><br/>
+		This script was made by <a href="http://www.aplusmedia.de">A+media</a> and can be <a href="https://github.com/aplusmedia/JSGallery2">downloaded on github</a><br/>
 		</p>
-	
+
 		<div id="pagerContainer">
 			<div id="thumbs">
 				<div id="pageContainer">
@@ -185,7 +88,7 @@
 					</div>
 				</div>
 			</div>
-			<?php 
+			<?php
 			if(isset($_GET['image'])) {
 				preg_match('%.*_(.*)\.jpg%', $_GET['image'], $result);
 				$page = ceil($result[1] / 9 - 1);
@@ -199,22 +102,22 @@
 		<div id="bigimageContainer">
 			<img src="<?php echo isset($_GET['image']) ? $_GET['image'] : 'images/big_01.jpg'; ?>" alt="" id="bigImage"/>
 		</div>
-	
-	
+
+
 		<div style="clear: both; height: 50px;"></div>
-		
+
 		<p>You need a particular HTML structure to get this to work (or <a href="flickr.php">flickr</a> or <a href="simpleviewer.php">xml</a>). First, you need a container where your pages are located in. You can then put thumbnail images into this
 		page, each surrounded by a div. This additional container will later contain the dynamic border. If you like to have more pages, just create more page containers and so on.<br/>
 		The most important thing, is the relation to the big image. So make sure, that each thumbnail is linked to somewhere and this link has a rel attribute. You just have to
 		put the big image url in there.</p>
-		
+
 		<p>You may also provide two links to navigate through the pages. They will automatically be hidden. You can also provide a loading image optionally. It will be shown
 		for each thumbnail while the big version of the image is preloaded. It also disappears automatically when preloading is done.</p>
-		
+
 		<p>Additionally, you can provide a no-script version very easily. Just a bit of coding in the dynamic language you like :-)</p>
-		
+
 		<p>On top of these features, you have the possibility to change the default behaviour by overwriting several class options</p>
-		
+
 		<p>Here are all the featuers:
 			<ul>
 				<li>nice transitions for page change, image select, etc.</li>
@@ -231,41 +134,41 @@
 				<li>shows simple viewer xml galleries (with <a href="simpleviewer.php">JSGallery2_simpleviewer</a>)</li>
 			</ul>
 		</p>
-	
-		<p>Here is the JS call for the example gallery: (the last 2 images are added dynamically)</p>	
+
+		<p>Here is the JS call for the example gallery: (the last 2 images are added dynamically)</p>
 <pre>
 myGallery = new JSGallery2(	$$('.thumbnail'), 	//these are the thumbnail elements
 				$('bigImage'), 		//the big image
 				$('pageContainer'),	//container which contains the pages
-				{'prevHandle': $('prev'),	//previous page link 
+				{'prevHandle': $('prev'),	//previous page link
 				 'nextHandle': $('next'), 	//next page link
 				 'loadingImage': 'loading.gif'	//loading image for thumbnails
 				});
 </pre>
 
 	<p>You see, you only need very few parameters to get this to work. Optionally, you can change many things with some options:</p>
-	
+
 <pre>
 option:			default value,		description
 
-borderWidthDeselected: 	2,	//the width of the border of an deselected image 
+borderWidthDeselected: 	2,	//the width of the border of an deselected image
 				(should be the same as in css)
 borderWidthSelected: 	7,	//border width of the selected image
 borderColor: 		'#fff',	//the color of the borders
 loadingMask: 		'#000',	//color of the mask overlay during loading of the big images
 loadingOpacity: 	0.6,	//opacity of the border div during loading (including the mask)
-loadingImage: 		null,	//you may specify a loading image which is displayed while 
+loadingImage: 		null,	//you may specify a loading image which is displayed while
 				the big images are being loaded
-selectSpeed: 		200,	//the duration of the select effect in ms 
+selectSpeed: 		200,	//the duration of the select effect in ms
 				(high values will make it look ugly)
 fadeSpeed: 		250,	//the duration of the image fading effect in ms
 pageSpeed: 		1000,	//the duration of the change page effect in ms
-prevHandle: 		null,	//if you pass a previous page handle in here, it will be 
+prevHandle: 		null,	//if you pass a previous page handle in here, it will be
 				hidden if it's not needed
 nextHandle: 		null,	//like above, but for next page
-initialIndex: 		-1,	//which thumb to select after init. 
+initialIndex: 		-1,	//which thumb to select after init.
 				you could create deep links with it.
-maxOpacity: 		0.8	//maximum opacity before cursor reaches prev/next control, 
+maxOpacity: 		0.8	//maximum opacity before cursor reaches prev/next control,
 				then it will be set to 1 instantly.
 </pre>
 
@@ -273,14 +176,12 @@ maxOpacity: 		0.8	//maximum opacity before cursor reaches prev/next control,
 
 <pre>myGallery.addImage('images/thumb_17.jpg', 'images/big_17.jpg', '?image=images/big_17.jpg');</pre>
 
-<p>You can also find <a href="http://www.esteak.net/basket/addplugin/JSGallery2_dynamic">this script on eSteak.net</a>, but remember that you also need the JSGallery2 class if you download it as standalone!</p>
-
 <p>If you like to create a JSGallery2 from flickr images, check out my <a href="flickr.php">JSGallery2_flickr</a> extension for JSGallery2 and if you
-like to have an easy-to-use <a href="http://www.airtightinteractive.com/simpleviewer/">SimpleViewer</a> fallback, check out my 
+like to have an easy-to-use <a href="http://www.airtightinteractive.com/simpleviewer/">SimpleViewer</a> fallback, check out my
 <a href="simpleviewer.php">JSGallery2_simpleviewer</a> extension which parses the same xml file!</p>
 
-	<p><a href="http://www.esteak.net/basket/addplugin/JSGallery2">Download on eSteak.net</a></p>
-		
+	<p><a href="https://github.com/aplusmedia/JSGallery2">Download on github</a></p>
+
 	</div>
 </body>
 </html>

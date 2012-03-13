@@ -1,0 +1,84 @@
+body {
+	background-color: #000;
+	color: #fff;
+	font-family: Helvetica;
+	font-size: 12px;
+	line-height: 1.5em;
+}
+
+body a {
+	color: #fff;
+}
+
+#container {
+	width: 1000px;
+	margin: 100px auto;
+}
+
+#thumbs {
+	overflow: hidden;
+	position: relative;
+}
+
+#pageContainer {
+	width: 3900px;
+}
+
+#pagerContainer {
+	float: left;
+	width: 250px;
+	margin-right: 50px;
+	height: 280px;
+}
+
+.page {
+	float: left;
+	width: 300px;
+	margin-bottom: 10px;
+}
+
+.thumbnail {
+	float: left;
+	margin: 0 15px 17px 0;
+	width: 65px;
+	height: 65px;
+}
+
+pre {
+	border: 1px solid #fff;
+	background-color: #333;
+	padding: 5px;
+}
+
+/* this is for the loading.gif */
+.thumbnail div img {
+	margin: 22px;
+}
+
+.thumbnail a img {
+	width: 65px;
+	height: 65px;
+}
+
+#bigimageContainer {
+	float: left;
+	position: relative;
+}
+
+#bigImage {
+	border: 3px solid #fff;
+}
+
+#prev {
+	float: left;
+	outline: none;
+}
+
+#next {
+	float: right;
+	outline: none;
+}
+
+a img {
+	border: 2px solid #fff;
+}
