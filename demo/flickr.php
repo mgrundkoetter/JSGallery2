@@ -77,7 +77,7 @@
 
 		<p>Here is the JS call for the example gallery:</p>
 <pre>
-myGallery = new JSGallery2_flickr('104772e7d715d4e70aafc88e12851b1a', 	//your API key
+myGallery = new JSGallery2_flickr('12345123451234512345', 	//your API key
 				{method: 'flickr.photos.search',	//flickr options
 				 text: 'dresden hdr',			//see http://www.flickr.com/services/api/
 				 per_page: 25

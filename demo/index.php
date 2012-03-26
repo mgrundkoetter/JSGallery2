@@ -28,9 +28,8 @@
 
 		<h1>JSGallery2 example page</h1>
 
-		<p>This an example for the JSGallery2 script. It evolved from the <a href="http://blog.aplusmedia.de/moo-gallery">old version</a> (for MooTools 1.11), which is still available.
-		As this new version is fully compatible with the old one, consider to switch to MooTools 1.2 and use this version!
-		It uses the <a href="http://mootools.net">mootools framework (version 1.2!)</a> and is totally free to use. Nevertheless, a backlink to my blog (or a <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=mg%40aplusmedia%2ede&item_name=A%2bmedia&no_shipping=1&return=http%3a%2f%2fblog%2eaplusmedia%2ede&cn=Betreff&tax=0&currency_code=EUR&lc=DE&bn=PP%2dDonationsBF&charset=UTF%2d8">donation</a> maybe?) would be very nice :-)<br/>
+		<p>This an example for the JSGallery2 script. It uses the <a href="http://mootools.net">mootools framework (version 1.2!)</a> and is totally free to use.
+		Nevertheless, a backlink to my blog (or a <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=mg%40aplusmedia%2ede&item_name=A%2bmedia&no_shipping=1&return=http%3a%2f%2fblog%2eaplusmedia%2ede&cn=Betreff&tax=0&currency_code=EUR&lc=DE&bn=PP%2dDonationsBF&charset=UTF%2d8">donation</a> maybe?) would be very nice :-)<br/>
 		This script was made by <a href="http://www.aplusmedia.de">A+media</a> and can be <a href="https://github.com/aplusmedia/JSGallery2">downloaded on github</a><br/>
 		</p>
 
